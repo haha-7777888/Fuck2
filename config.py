@@ -1,4 +1,4 @@
-```python
+
 #
 # Copyright (C) 2021-2022 by TheAloneteam@Github
 # This file is part of TheAloneMusic.
@@ -270,4 +270,4 @@ if missing_variables:
         + ", ".join(missing_variables)
         + ". Configure them in your .env file."
     )
-```
+
