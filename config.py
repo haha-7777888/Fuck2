@@ -155,8 +155,7 @@ TG_VIDEO_FILESIZE_LIMIT = get_int(
 
 # Generate your sessions using a trusted session generator.
 # Never commit session strings to a public repository.
-
-STRING1 = get_env("BAHu1LMAPGXy-tKaTUF7earYnP125hebkUQWkQhjhSYQFiqrjoWaIuAEhzMuNBIUmPTAa5KbwZM9jghZzArhM9fzAmRE1zV0pAiGPMYbMvOxTER3vWlWo4n2gpv3Uoh47jUtBd7oInamLRnb40drs31SDmUL5CV6Jp_1NEJ5lTBl-00u5bfkdSlpLkEL7r8wgQ6NghjqKdLF2nNFNeg86CxrhRjUnhwD1sI8iNZSI7vE97LJrO1xqaV1vIlj9C303kg6y7JL55JVR_OLiiTAbXZnvUcB1mNkn8A6aV8Nh5AtrHGanvpHrq5ObFFMSkljQew3cRrfDVhff65rpWWTFZVxqh8h8wAAAAHKrF1LAA")
+STRING1 = get_env("STRING_SESSION")
 STRING2 = get_env("STRING_SESSION2")
 STRING3 = get_env("STRING_SESSION3")
 STRING4 = get_env("STRING_SESSION4")
