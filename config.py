@@ -58,13 +58,13 @@ def get_bool(name, default=False):
 
 # Get these values from https://my.telegram.org/apps
 API_ID = get_int("API_ID", 26249286)
-API_HASH = get_env("API_HASH")
+API_HASH = get_env("4e3bf0b014fda4ac752e8f4ab8542")
 
 # Get your bot token from @BotFather.
-BOT_TOKEN = get_env("BOT_TOKEN")
+BOT_TOKEN = get_env("8806982181:AAHG7dxH7n-IJ2V_2zxEFCAWy7FdzazSe68")
 
 # MongoDB connection string.
-MONGO_DB_URI = get_env("MONGO_DB_URI")
+MONGO_DB_URI = get_env("mongodb+srv://musicbotxd:musicbotxd@cluster0.6thyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster")
 
 # --------------------------------------------------
 # BOT SETTINGS
@@ -156,7 +156,7 @@ TG_VIDEO_FILESIZE_LIMIT = get_int(
 # Generate your sessions using a trusted session generator.
 # Never commit session strings to a public repository.
 
-STRING1 = get_env("STRING_SESSION")
+STRING1 = get_env("BAHu1LMAPGXy-tKaTUF7earYnP125hebkUQWkQhjhSYQFiqrjoWaIuAEhzMuNBIUmPTAa5KbwZM9jghZzArhM9fzAmRE1zV0pAiGPMYbMvOxTER3vWlWo4n2gpv3Uoh47jUtBd7oInamLRnb40drs31SDmUL5CV6Jp_1NEJ5lTBl-00u5bfkdSlpLkEL7r8wgQ6NghjqKdLF2nNFNeg86CxrhRjUnhwD1sI8iNZSI7vE97LJrO1xqaV1vIlj9C303kg6y7JL55JVR_OLiiTAbXZnvUcB1mNkn8A6aV8Nh5AtrHGanvpHrq5ObFFMSkljQew3cRrfDVhff65rpWWTFZVxqh8h8wAAAAHKrF1LAA")
 STRING2 = get_env("STRING_SESSION2")
 STRING3 = get_env("STRING_SESSION3")
 STRING4 = get_env("STRING_SESSION4")
