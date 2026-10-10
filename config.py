@@ -64,7 +64,7 @@ API_HASH = get_env("4e3bf0b014fda4ac752e8f4ab8542")
 BOT_TOKEN = get_env("8806982181:AAHG7dxH7n-IJ2V_2zxEFCAWy7FdzazSe68")
 
 # MongoDB connection string.
-MONGO_DB_URI = get_env("mongodb+srv://musicbotxd:musicbotxd@cluster0.6thyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster")
+MONGO_DB_URI = get_env("mongodb+srv://musicbotxd:musicbotxd@cluster0.6thyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 # --------------------------------------------------
 # BOT SETTINGS
