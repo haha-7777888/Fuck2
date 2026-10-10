@@ -11,7 +11,7 @@ import re
 from dotenv import load_dotenv
 from pyrogram import filters
 
-load_dotenv()
+load_dotenv("/root/ZeroTwo/.env", override=True)
 
 
 # --------------------------------------------------
