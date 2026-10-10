@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2022 by TheAloneteam@Github, < https://github.com/TheAloneTeam >.
 #
-# This file is part of < https://github.com/TheAloneTeam/TheZeroTwo > project,
+# This file is part of < https://github.com/TheAloneTeam/TheAloneMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TheAloneTeam/TheZeroTwo/blob/master/LICENSE >
+# Please see < https://github.com/TheAloneTeam/TheAloneMusic/blob/master/LICENSE >
 # All rights reserved.
 
 import re
@@ -15,14 +15,14 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", 0))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "26249286"))
+API_HASH = getenv("API_HASH", "4e3bf0b014fda4ac752e8f4ab854279b")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "8287492525:AAEkWgl73gXwBBNHIiS2HCcs9IUIaZgabvc")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://musicbotxd:musicbotxd@cluster0.6thyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 
@@ -30,11 +30,11 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 ADS_MODE = getenv("ADS_MODE", None)
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", 0))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1003972764819"))
 
 DEBUG_IGNORE_LOG = True
 # Get this value from  on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 8106551502))
+OWNER_ID = int(getenv("OWNER_ID", 6018803920))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -44,15 +44,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/TheAloneTeam/ZeroTwo",
+    "https://github.com/slayer123700/AloneMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/TheAloneTeam")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/TheTeamAlone")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/LoyaItyLess")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/LoyaItyLess")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", None))
@@ -74,7 +74,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION", "BAHu1LMAPGXy-tKaTUF7earYnP125hebkUQWkQhjhSYQFiqrjoWaIuAEhzMuNBIUmPTAa5KbwZM9jghZzArhM9fzAmRE1zV0pAiGPMYbMvOxTER3vWlWo4n2gpv3Uoh47jUtBd7oInamLRnb40drs31SDmUL5CV6Jp_1NEJ5lTBl-00u5bfkdSlpLkEL7r8wgQ6NghjqKdLF2nNFNeg86CxrhRjUnhwD1sI8iNZSI7vE97LJrO1xqaV1vIlj9C303kg6y7JL55JVR_OLiiTAbXZnvUcB1mNkn8A6aV8Nh5AtrHGanvpHrq5ObFFMSkljQew3cRrfDVhff65rpWWTFZVxqh8h8wAAAAHKrF1LAA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -91,16 +91,16 @@ confirmer = {}
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
-    "https://files.catbox.moe/34xlvu.jpg",
+    "https://i.ibb.co/DHVGdLJg/772800769a10.jpg",
 )
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://files.catbox.moe/34xlvu.jpg",
+    "https://i.ibb.co/DHVGdLJg/772800769a10.jpg",
 )
-PLAYLIST_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/34xlvu.jpg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/34xlvu.jpg"
+PLAYLIST_IMG_URL = "https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1776841014403-6abf3244.jpg"
+STATS_IMG_URL = "https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1776841063817-c34c8f54.jpg"
+TELEGRAM_AUDIO_URL = "https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1776841034406-c79c4ca7.jpg"
+TELEGRAM_VIDEO_URL = "https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1776841034406-c79c4ca7.jpg"
 STREAM_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
 SOUNCLOUD_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
 YOUTUBE_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
