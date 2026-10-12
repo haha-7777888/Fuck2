@@ -83,7 +83,9 @@ admin_37 : "𝐒ᴜᴄᴄᴇssꜰᴜʟʟʏ 𝐆ᴏᴛ <code>{0}</code> 𝐔ᴘ�
 admin_38 : "» 𝐀ᴅᴅᴇᴅ 1 𝐔ᴘᴠᴏᴛᴇ."
 admin_39 : "» 𝐑ᴇᴍᴏᴠᴇᴅ 1 𝐔ᴘᴠᴏᴛᴇ."
 admin_40 : "𝐔ᴘᴠᴏᴛᴇᴅ."
-start_1 : "{0} 𝐈s 𝐀ʟɪᴠᴇ 𝐁ᴀʙʏ.\n\n<b>✫ 𝐔ᴘᴛɪᴍᴇ :</b> {1}"
+start_1: |
+  <blockquote><emoji id="6238004754044163412">🎶</emoji> Elevate Your Audio.
+  Welcome to {0} — the future of sonic immersion. ⬡ Premium Quality | Seamless Streaming | Ultra-Low Latency</blockquote>
 
 start_2: |
   <blockquote><b><emoji id="5219834485389927168">🎶</emoji> ʜᴇʏ ʙᴧʙʏ
