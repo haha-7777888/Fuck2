@@ -57,14 +57,12 @@ def get_bool(name, default=False):
 # --------------------------------------------------
 
 # Get these values from https://my.telegram.org/apps
+
 API_ID = get_int("API_ID", 26249286)
-API_HASH = get_env("4e3bf0b014fda4ac752e8f4ab8542")
+API_HASH = get_env("API_HASH")
+BOT_TOKEN = get_env("BOT_TOKEN")
+MONGO_DB_URI = get_env("MONGO_DB_URI")
 
-# Get your bot token from @BotFather.
-BOT_TOKEN = get_env("8806982181:AAHG7dxH7n-IJ2V_2zxEFCAWy7FdzazSe68")
-
-# MongoDB connection string.
-MONGO_DB_URI = get_env("mongodb+srv://lollolopp0900_db_user:xbaj05RPixvCXNMS@zero.rqsozug.mongodb.net/?appName=Zero")
 
 # --------------------------------------------------
 # BOT SETTINGS
