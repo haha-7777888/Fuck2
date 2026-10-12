@@ -17,9 +17,17 @@ def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"], url=f"https://t.me/{app.username}?startgroup=true"
-            ),
-            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
+    text=_["S_B_1"],
+    url=f"https://t.me/{app.username}?startgroup=true",
+    style="success",
+    icon_custom_emoji_id=5134476056241112076,
+),
+            InlineKeyboardButton(
+    text=_["S_B_2"],
+    url=config.SUPPORT_CHAT,
+    style="success",
+    icon_custom_emoji_id=5134202243486057363,
+),
         ],
     ]
     return buttons
