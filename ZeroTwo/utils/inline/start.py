@@ -37,12 +37,19 @@ def private_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"https://t.me/{app.username}?startgroup=true",
+    text=_["S_B_3"],
+    url=f"https://t.me/{app.username}?startgroup=true",
+    style="success",
+    icon_custom_emoji_id=5134476056241112076,
             )
         ],
         [
-            InlineKeyboardButton(text=_["S_B_2"], callback_data="Alone_Music"),
+            InlineKeyboardButton(
+    text=_["S_B_2"],
+    callback_data="Alone_Music",
+    style="success",
+    icon_custom_emoji_id=5134202243486057363,
+),
             InlineKeyboardButton(text="💌 ʏᴛ-ᴀᴘɪ", callback_data="bot_info_data"),
         ],
         [InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper")],
