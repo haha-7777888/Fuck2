@@ -84,9 +84,9 @@ admin_38 : "» 𝐀ᴅᴅᴇᴅ 1 𝐔ᴘᴠᴏᴛᴇ."
 admin_39 : "» 𝐑ᴇᴍᴏᴠᴇᴅ 1 𝐔ᴘᴠᴏᴛᴇ."
 admin_40 : "𝐔ᴘᴠᴏᴛᴇᴅ."
 start_1: |
-  <blockquote><emoji id="6238004754044163412">🎶</emoji> Elevate Your Audio.
-  Welcome to {0} — the future of sonic immersion. ⬡ Premium Quality | Seamless Streaming | Ultra-Low Latency</blockquote>
-
+  <blockquote><b><emoji id="6238004754044163412">🎶</emoji> Elevate Your Audio.
+  Welcome to {0} — the future of sonic immersion. ⬡ Premium Quality | Seamless Streaming | Ultra-Low Latency</b></blockquote>
+  
 start_2: |
   <blockquote><b><emoji id="5219834485389927168">🎶</emoji> ʜᴇʏ ʙᴧʙʏ
   ʏᴏᴜʀ ᴠɪʙᴇs ꜱєєм ꜱσ ғɪηє ᴛσᴅᴧʏ {0}</b></blockquote>
@@ -95,8 +95,8 @@ start_2: |
   ғσʀ ɢυɪᴅᴧηᴄє, ᴛᴧᴘ ᴏη ʜᴇʟᴘ ᴀηᴅ ғʟʏ ᴡɪᴛʜ ϻᴇ, ʜᴀᴠᴇη ɢᴄ</b></blockquote>
   
 start_3: |
-  <blockquote><emoji id="6238004754044163412">🎶</emoji> Elevate Your Audio.
-  Welcome to {0} — the future of sonic immersion. ⬡ Premium Quality | Seamless Streaming | Ultra-Low Latency</blockquote>
+  <blockquote><b><emoji id="6238004754044163412">🎶</emoji> Elevate Your Audio.
+  Welcome to {0} — the future of sonic immersion. ⬡ Premium Quality | Seamless Streaming | Ultra-Low Latency</b></blockquote>
 start_4 : "🎄 <b>𝐒ᴜᴘᴇʀɢʀᴏᴜᴘ 𝐍ᴇᴇᴅᴇᴅ</b> 🎄\n\n𝐏ʟᴇᴀsᴇ 𝐂ᴏɴᴠᴇʀᴛ 𝐘ᴏᴜʀ <b>𝐆ʀᴏᴜᴘ</b> 𝐓ᴏ <b>𝐒ᴜᴘᴇʀɢʀᴏᴜᴘ</b> 𝐀ɴᴅ 𝐓ʜᴇɴ 𝐀ᴅᴅ 𝐌ᴇ 𝐀ɢᴀɪɴ.\n\n<b>𝐇ᴏᴡ 𝐓ᴏ 𝐌ᴀᴋᴇ 𝐒ᴜᴘᴇʀɢʀᴏᴜᴘ ?</b>\n- 𝐌ᴀᴋᴇ 𝐘ᴏᴜʀ 𝐆ʀᴏᴜᴘ's 𝐂ʜᴀᴛ 𝐇ɪsᴛᴏʀʏ <b>𝐕ɪsɪʙʟᴇ</b> 𝐎ɴᴄᴇ."
 start_5 : "<b>↝ 𝐁ʟᴀᴄᴋʟɪsᴛᴇᴅ 𝐂ʜᴀᴛ ↜</b>\n\n𝐓ʜɪs 𝐂ʜᴀᴛ 𝐈s 𝐁ʟᴀᴄᴋʟɪsᴛᴇᴅ 𝐎ɴ {0} 𝐃ᴀᴛᴀʙᴀsᴇ.\n𝐑ᴇǫᴜᴇsᴛ 𝐀 <a href={1}>𝐒ᴜᴅᴏ 𝐔sᴇʀ</a> 𝐓ᴏ 𝐔ɴʙʟᴀᴄᴋʟɪsᴛ 𝐘ᴏᴜʀ 𝐂ʜᴀᴛ 𝐎ʀ 𝐕ɪsɪᴛ <a href={2}>𝐒ᴜᴘᴘᴏʀᴛ 𝐂ʜᴀᴛ.</a>"
 start_6 : "😲 <b>𝐓ʀᴀᴄᴋ 𝐈ɴꜰᴏʀᴍᴀᴛɪᴏɴ</b> 😲\n\n📌 <b>𝐓ɪᴛʟᴇ :</b> {0}\n\n⏳ <b>𝐃ᴜʀᴀᴛɪᴏɴ :</b> {1} 𝐌ɪɴᴜᴛᴇs\n👀 <b>𝐕ɪᴇᴡs :</b> <code>{2}</code>\n⏰ <b>𝐏ᴜʙʟɪsʜᴇᴅ 𝐎ɴ :</b> {3}\n📎 <b>𝐂ʜᴀɴɴᴇʟ :</b> <a href={4}>{5}</a>\n\n<u><b>🥀 𝐒ᴇᴀʀᴄʜ 𝐏ᴏᴡᴇʀᴇᴅ 𝐁ʏ {6}</b></u>"
