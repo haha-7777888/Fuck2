@@ -1,5 +1,5 @@
 PROJECT LICENSE & POLICIES
-ZeroTwo — LICENSE (Comprehensive Edition)
+AloneMusic — LICENSE (Comprehensive Edition)
 ------------------------------------------------------------
 Preamble
 ------------------------------------------------------------
@@ -39,8 +39,8 @@ Attribution & Notices
   and include a link to the original project.
 
 Attribution example to include in documentation or About pages:
-"ZeroTwo — open source project. Original repository:
-https://github.com/TheAloneTeam/ZeroTwo"
+"AloneMusic — open source project. Original repository:
+https://github.com/TheAloneTeam/AloneMusic"
 
 ------------------------------------------------------------
 Contributions & Contributor Rights
@@ -151,7 +151,7 @@ How to use / install this LICENSE
    `Copyright (c) 2025 TheAloneTeam and contributors`
 
 ------------------------------------------------------------
-Thank you for using and contributing to ZeroTwo!
+Thank you for using and contributing to AloneMusic!
 If you'd like a different license (Apache 2.0 or GPLv3) or want me
 to automatically create `CODE_OF_CONDUCT.md` and `CONTRIBUTING.md`
 files separately, tell me and I'll generate them right away.

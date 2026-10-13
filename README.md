@@ -1,15 +1,15 @@
-# 🎵 ZeroTwo
+# 🎵 AloneMusic
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![Stars](https://img.shields.io/github/stars/TheAloneTeam/ZeroTwo?style=social)](https://github.com/TheAloneTeam/ZeroTwo/stargazers)
-[![Forks](https://img.shields.io/github/forks/TheAloneTeam/ZeroTwo?style=social)](https://github.com/TheAloneTeam/ZeroTwo/network/members)
+[![Stars](https://img.shields.io/github/stars/TheAloneTeam/AloneMusic?style=social)](https://github.com/TheAloneTeam/AloneMusic/stargazers)
+[![Forks](https://img.shields.io/github/forks/TheAloneTeam/AloneMusic?style=social)](https://github.com/TheAloneTeam/AloneMusic/network/members)
 
 ---
 
 
 ## 🚀 Introduction
-**ZeroTwo** is a Python-based **music bot/service** that allows users to play, pause, skip, and manage playlists with ease.  
+**AloneMusic** is a Python-based **music bot/service** that allows users to play, pause, skip, and manage playlists with ease.  
 It’s designed to be lightweight, fast, and customizable.  
 
 ---
@@ -25,11 +25,11 @@ It’s designed to be lightweight, fast, and customizable.
 ---
 ## ❤️ Support
 
-💬 **Telegram:** [ZeroTwo](https://t.me/TheTeamHacker)  
+💬 **Telegram:** [AloneMusic](https://t.me/TheTeamHacker)  
 
 🆘 **Any Problem? DM:** [𝚨Łꪮⲛ𝛆 🚩𝗧ε᧘‌ᴍ](https://t.me/codeshivu)
 
-📂 **GitHub Issues:** [Report a Problem](https://github.com/TheAloneTeam/ZeroTwo/issues/new)
+📂 **GitHub Issues:** [Report a Problem](https://github.com/TheAloneTeam/AloneMusic/issues/new)
 
 ---
 
@@ -44,7 +44,7 @@ It’s designed to be lightweight, fast, and customizable.
 ### 🔹 1. Deploy on **Heroku** (One Click)
 Click this button to deploy instantly on **Heroku**:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheAloneTeam/ZeroTwo)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheAloneTeam/AloneMusic)
 
 
 - **Update System and Install Dependencies**:  
@@ -58,7 +58,7 @@ Click this button to deploy instantly on **Heroku**:
   ```
 - **Clone the Repository:**  
   ```bash
-  git clone https://github.com/TheAloneTeam/ZeroTwo cd ZeroTwo
+  git clone https://github.com/TheAloneTeam/AloneMusic cd AloneMusic
   ```
   
 - **Create and Activate a Virtual Environment:**
@@ -85,7 +85,7 @@ Click this button to deploy instantly on **Heroku**:
 
 - Run the Bot:  
   ```bash
-  python3 -m ZeroTwo
+  python3 -m AloneMusic
   ```
 
 - Detach from the **tmux** Session (Bot keeps running):  

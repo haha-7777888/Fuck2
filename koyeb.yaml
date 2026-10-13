@@ -1,7 +1,7 @@
 version: "1"
 
 services:
-  - name: ZeroTwo-bot
+  - name: alonemusic-bot
     type: container
     image: koyeb/python:3.11
     build:
@@ -19,6 +19,6 @@ services:
     region: ewr
     instanceCount: 1
     instanceSize: s
-    startCommand: python3 -m ZeroTwo
+    startCommand: python3 -m AloneMusic
     autoDeploy: true
     mounts: []

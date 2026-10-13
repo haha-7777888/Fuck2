@@ -1,1 +1,1 @@
-worker: python3 -m ZeroTwo
+worker: python3 -m AloneMusic

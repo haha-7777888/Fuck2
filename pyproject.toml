@@ -3,7 +3,7 @@ requires = ["setuptools>=70.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ZeroTwo"
+name = "AloneMusic"
 version = "0.1.0"
 description = "🎵 Advanced Telegram Music Bot by TheAloneTeam — PyroFork + ntgcalls + YouTube + Spotify"
 readme = "README.md"
@@ -48,8 +48,8 @@ dependencies = [
   "tgcrypto>=1.2.5",
   "pyrofork>=2.3.45",
   "ffmpeg-python>=0.2.0",
-  "py-tgcalls==2.2.11",
-  "ntgcalls==2.1.0",
+  "py-tgcalls",
+  "ntgcalls",
   "motor>=3.4.0",
   "psutil>=5.9.8",
   "heroku3>=5.2.1",
@@ -63,16 +63,17 @@ dependencies = [
   "prettytable>=3.12.0",
   "openai>=1.40.0",
   "gTTS",
-  "static_ffmpeg"
+  "static_ffmpeg",
+  "numpy"
 ]
 
 [tool.setuptools.packages.find]
-include = ["ZeroTwo", "core", "config", "strings"]
+include = ["AloneMusic", "core", "config", "strings"]
 
 [project.urls]
-Repository = "https://github.com/TheAloneTeam/ZeroTwo"
-Issues = "https://github.com/TheAloneTeam/ZeroTwo/issues"
-Changelog = "https://github.com/TheAloneTeam/ZeroTwo/blob/master/CHANGELOG.md"
+Repository = "https://github.com/TheAloneTeam/AloneMusic"
+Issues = "https://github.com/TheAloneTeam/AloneMusic/issues"
+Changelog = "https://github.com/TheAloneTeam/AloneMusic/blob/master/CHANGELOG.md"
 
 [project.scripts]
-ZeroTwo = "ZeroTwo.__main__:main"
+alonemusic = "AloneMusic.__main__:main"

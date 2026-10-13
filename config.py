@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2022 by TheAloneteam@Github, < https://github.com/TheAloneTeam >.
 #
-# This file is part of < https://github.com/TheAloneTeam/TheZeroTwo > project,
+# This file is part of < https://github.com/TheAloneTeam/TheAloneMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TheAloneTeam/TheZeroTwo/blob/master/LICENSE >
+# Please see < https://github.com/TheAloneTeam/TheAloneMusic/blob/master/LICENSE >
 # All rights reserved.
 
 import re
@@ -11,8 +11,40 @@ from os import getenv
 
 from dotenv import load_dotenv
 from pyrogram import filters
+from os import getenv
+import random
+
+RANDOM_THUMBS = [
+    "https://files.catbox.moe/ikxb96.jpg",
+    "https://files.catbox.moe/dqxsjh.jpg",
+    "https://files.catbox.moe/lnaqxk.jpg",
+    "https://files.catbox.moe/0qzssp.jpg",
+    "https://files.catbox.moe/lz57vi.jpg",
+    "https://files.catbox.moe/x1fcb6.jpg",
+    "https://files.catbox.moe/32ghsc.jpg",
+]
+
+def get_thumb():
+    return random.choice(RANDOM_THUMBS)
+
+
+START_IMG_URL = getenv("START_IMG_URL", get_thumb())
+PING_IMG_URL = getenv("PING_IMG_URL", get_thumb())
+
+PLAYLIST_IMG_URL = get_thumb()
+STATS_IMG_URL = get_thumb()
+TELEGRAM_AUDIO_URL = get_thumb()
+TELEGRAM_VIDEO_URL = get_thumb()
+STREAM_IMG_URL = get_thumb()
+SOUNCLOUD_IMG_URL = get_thumb()
+YOUTUBE_IMG_URL = get_thumb()
+SPOTIFY_ARTIST_IMG_URL = get_thumb()
+SPOTIFY_ALBUM_IMG_URL = get_thumb()
+SPOTIFY_PLAYLIST_IMG_URL = get_thumb()
 
 load_dotenv()
+YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com') ## xBit Music Endpoint.
+YT_API_KEY = getenv("YT_API_KEY" , "xbit_KiY0HWimxyDMVxjg6R7-7UtJKyPW9kSD")
 
 # Get this value from my.telegram.org/apps
 API_ID = int(getenv("API_ID", 0))
@@ -44,16 +76,16 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/TheAloneTeam/ZeroTwo",
+    "https://github.com/riteshxcoder/AloneMusicc",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/TheAloneTeam")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/TheTeamAlone")
 
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MeowCloner")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/MeowClone")
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", None))
 
@@ -88,7 +120,7 @@ votemode = {}
 autoclean = []
 confirmer = {}
 
-
+"""
 START_IMG_URL = getenv(
     "START_IMG_URL",
     "https://files.catbox.moe/34xlvu.jpg",
@@ -107,7 +139,7 @@ YOUTUBE_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
 SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
 SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
 SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-
+"""
 
 def time_to_seconds(time):
     stringt = str(time)

@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.0] – YYYY-MM-DD  
 ### Added  
-- Initial release of the project based on ZeroTwo.  
+- Initial release of the project based on AloneMusic.  
 - Core bot features: play/pause/skip, playlist management, voice chat streaming.  
 - Settings panel and admin controls for groups, links & banned words.  
 - Welcome image generator with circular avatars and custom assets.  

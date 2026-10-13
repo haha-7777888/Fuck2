@@ -1,11 +1,11 @@
 version: "3.9"
 
 services:
-  ZeroTwo:
+  alonemusic:
     build: .
-    container_name: ZeroTwo_bot
+    container_name: alonemusic_bot
     restart: always
-    command: python3 -m ZeroTwo
+    command: python3 -m AloneMusic
     env_file:
       - .env
     volumes:

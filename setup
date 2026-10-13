@@ -9,7 +9,7 @@ reset='\033[0m'
 
 echo -e "${blue}
 ==============================
-   ZeroTwo Auto Setup
+   AloneMusic Auto Setup
 ==============================
 ${reset}"
 
@@ -21,13 +21,13 @@ sudo apt update -y && sudo apt upgrade -y
 echo -e "${yellow}Installing system packages...${reset}"
 sudo apt install -y python3 python3-pip python3-venv git ffmpeg libffi-dev libopus0
 
-if [ ! -d "ZeroTwo" ]; then
-  git clone https://github.com/TheAloneTeam/ZeroTwo.git
+if [ ! -d "AloneMusic" ]; then
+  git clone https://github.com/TheAloneTeam/AloneMusic.git
 else
-  cd ZeroTwo && git pull && cd ..
+  cd AloneMusic && git pull && cd ..
 fi
 
-cd ZeroTwo
+cd AloneMusic
 
 echo -e "${yellow}Creating venv...${reset}"
 python3 -m venv venv
@@ -60,5 +60,5 @@ EOF
 
 echo -e "${green}.env created successfully${reset}"
 
-echo -e "${green}Starting ZeroTwo...${reset}"
-python3 -m ZeroTwo.bot
+echo -e "${green}Starting AloneMusic...${reset}"
+python3 -m AloneMusic.bot
