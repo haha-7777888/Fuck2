@@ -29,9 +29,11 @@ from ZeroTwo.utils.database import (
 )
 from ZeroTwo.utils.decorators.language import LanguageStart
 from ZeroTwo.utils.formatters import get_readable_time
-from ZeroTwo.utils.inline import help_pannel, private_panel, start_panel
+from ZeroTwo.utils.inline import help_pannel
+from ZeroTwo.utils.inline.start import start_panel, private_panel
 from config import BANNED_USERS
 from strings import get_string
+
 
 EFFECT_ID = [
     5046509860389126442,
@@ -77,7 +79,7 @@ async def start_pm(client, message: Message, _):
 
         if name[0:3] == "inf":
             m = await message.reply_text("🔎")
-            query = (str(name)).replace("info_", "", 1)
+            query = str(name).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
 
             results = VideosSearch(query, limit=1)
@@ -172,17 +174,8 @@ async def start_pm(client, message: Message, _):
 async def start_gp(client, message: Message, _):
     uptime = int(time.time() - _boot_)
 
-    # Group start: show only the Support button.
-    buttons = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text="❖ Support",
-                    url=config.SUPPORT_CHAT,
-                )
-            ]
-        ]
-    )
+    # Group start: Add Me and Support in one row.
+    buttons = InlineKeyboardMarkup(start_panel(_))
 
     await message.reply_photo(
         photo=config.START_IMG_URL,
@@ -230,7 +223,7 @@ async def welcome(client, message: Message):
 
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
-                    has_spoiler=True,
+                    has_spoiler=False,
                     caption=_["start_3"].format(
                         message.from_user.first_name,
                         app.mention,
@@ -245,4 +238,3 @@ async def welcome(client, message: Message):
 
         except Exception as ex:
             print(ex)
-
