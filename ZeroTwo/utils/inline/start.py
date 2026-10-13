@@ -10,8 +10,10 @@ def btn(text, style=None, icon=None, **kw):
         from pyrogram.enums import ButtonStyle
 
         extra = {}
+
         if style:
             extra["style"] = getattr(ButtonStyle, style.upper())
+
         if icon:
             extra["icon_custom_emoji_id"] = str(icon)
 
@@ -25,27 +27,29 @@ def start_panel(_):
     return [
         [
             btn(
-                "➕ 𝐀ᴅᴅ 𝐌ᴇ",
+                "𝐀ᴅᴅ 𝐌ᴇ",
                 "success",
                 5134476056241112076,
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
+        ],
+        [
             btn(
-                "🛟 𝐒ᴜᴘᴘᴏʀᴛ",
+                "𝐒ᴜᴘᴘᴏʀᴛ",
                 "success",
                 5134202243486057363,
                 url=config.SUPPORT_CHAT,
             ),
-        ],
-        [
             btn(
-                "📢 𝐂ᴏᴅᴇ 𝐂ʀᴇᴡ",
+                "𝐂ᴏᴅᴇ 𝐂ʀᴇᴡ",
                 "success",
                 5085022089103016925,
                 url=config.CODE_CREW_CHANNEL,
             ),
+        ],
+        [
             btn(
-                "📚 𝐂ᴏᴍᴍᴀɴᴅs",
+                "𝐂ᴏᴍᴍᴀɴᴅs",
                 "success",
                 5134202243486057363,
                 callback_data="settings_back_helper",
@@ -58,31 +62,32 @@ def private_panel(_):
     return [
         [
             btn(
-                "➕ 𝐀ᴅᴅ 𝐌ᴇ",
+                " 𝐀ᴅᴅ 𝐌ᴇ",
                 "success",
                 5134476056241112076,
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
+        ],
+        [
             btn(
-                "🛟 𝐒ᴜᴘᴘᴏʀᴛ",
+                " 𝐒ᴜᴘᴘᴏʀᴛ",
                 "success",
                 5134202243486057363,
                 url=config.SUPPORT_CHAT,
             ),
-        ],
-        [
             btn(
-                "📢 𝐂ᴏᴅᴇ 𝐂ʀᴇᴡ",
+                " 𝐂ᴏᴅᴇ 𝐂ʀᴇᴡ",
                 "success",
                 5085022089103016925,
                 url=config.CODE_CREW_CHANNEL,
             ),
+        ],
+        [
             btn(
-                "📚 𝐂ᴏᴍᴍᴀɴᴅs",
+                " 𝐂ᴏᴍᴍᴀɴᴅs",
                 "success",
                 5134202243486057363,
                 callback_data="settings_back_helper",
             ),
         ],
     ]
-
