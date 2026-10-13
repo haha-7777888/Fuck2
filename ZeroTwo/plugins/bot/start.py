@@ -1,4 +1,4 @@
-```python
+
 #
 # Copyright (C) 2021-2022 by TheAloneteam@Github, < https://github.com/TheAloneTeam >.
 # This file is part of < https://github.com/TheAloneTeam/ZeroTwo > project,
@@ -245,4 +245,4 @@ async def welcome(client, message: Message):
 
         except Exception as ex:
             print(ex)
-```
+
