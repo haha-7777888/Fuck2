@@ -75,7 +75,7 @@ def private_panel(_):
                 "📢 𝐂ᴏᴅᴇ 𝐂ʀᴇᴡ",
                 "success",
                 5085022089103016925,
-                url=config.,
+                url=config.CODE_CREW_CHANNEL,
             ),
             btn(
                 "📚 𝐂ᴏᴍᴍᴀɴᴅs",
