@@ -189,7 +189,7 @@ str_2 : "➻ 𝐕ᴀʟɪᴅ 𝐒ᴛʀᴇᴀᴍ 𝐕ᴇʀɪꜰɪᴇᴅ.\n\n𝐏ʀ
 str_3 : "𝐅ᴀɪʟᴇᴅ 𝐓ᴏ 𝐒ᴛʀᴇᴀᴍ 𝐘ᴏᴜᴛᴜʙᴇ 𝐋ɪᴠᴇ 𝐒ᴛʀᴇᴀᴍ, 𝐍ᴏ 𝐋ɪᴠᴇ 𝐅ᴏʀᴍᴀᴛ 𝐅ᴏᴜɴᴅ."
 
 ping_1 : "{0} 𝐈s 𝐏ɪɴɢɪɴɢ..."
-PING_2: "<tg-emoji emoji-id=\"5886666052590377346\">✨</tg-emoji> 𝐏ᴏɴɢ : <code>{0}ᴍs</code>\n\n<b><u>{1} 𝐒ʏsᴛᴇᴍ 𝐒ᴛᴀᴛs :</u></b>\n\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐔ᴘᴛɪᴍᴇ : {2}\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐑ᴀᴍ : {3}\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐂ᴘᴜ : {4}\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐃ɪsᴋ : {5}\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐏ʏ-𝐓ɢᴄᴀʟʟs : <code>{6}ᴍs</code>"
+ping_2: "<tg-emoji emoji-id=\"5886666052590377346\">✨</tg-emoji> 𝐏ᴏɴɢ : <code>{0}ᴍs</code>\n\n<b><u>{1} 𝐒ʏsᴛᴇᴍ 𝐒ᴛᴀᴛs :</u></b>\n\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐔ᴘᴛɪᴍᴇ : {2}\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐑ᴀᴍ : {3}\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐂ᴘᴜ : {4}\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐃ɪsᴋ : {5}\n<tg-emoji emoji-id=\"5447181973544008180\">✨</tg-emoji> 𝐏ʏ-𝐓ɢᴄᴀʟʟs : <code>{6}ᴍs</code>"
 
 queue_1 : "» 𝐅ᴇᴛᴄʜɪɴɢ 𝐐ᴜᴇᴜᴇ...\n\n𝐏ʟᴇᴀsᴇ 𝐖ᴀɪᴛ..."
 queue_2 : "» 𝐐ᴜᴇᴜᴇ 𝐄ᴍᴘᴛʏ."
