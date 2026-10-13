@@ -24,6 +24,7 @@ def btn(text, style=None, icon=None, **kw):
 
 
 def start_panel(_):
+    """Buttons displayed on group start."""
     return [
         [
             btn(
@@ -32,33 +33,18 @@ def start_panel(_):
                 5134476056241112076,
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
-        ],
-        [
             btn(
                 "𝐒ᴜᴘᴘᴏʀᴛ",
                 "success",
                 5134202243486057363,
                 url=config.SUPPORT_CHAT,
             ),
-            btn(
-                "𝐂ᴏᴅᴇ 𝐂ʀᴇᴡ",
-                "success",
-                5085022089103016925,
-                url=config.CODE_CREW_CHANNEL,
-            ),
-        ],
-        [
-            btn(
-                "𝐂ᴏᴍᴍᴀɴᴅs",
-                "success",
-                5134202243486057363,
-                callback_data="settings_back_helper",
-            ),
         ],
     ]
 
 
 def private_panel(_):
+    """Buttons displayed on private/DM start."""
     return [
         [
             btn(
@@ -84,7 +70,7 @@ def private_panel(_):
         ],
         [
             btn(
-                " 𝐂ᴏᴍᴍᴀɴᴅs",
+                "𝐂ᴏᴍᴍᴀɴᴅs",
                 "success",
                 5134202243486057363,
                 callback_data="settings_back_helper",
