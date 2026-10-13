@@ -13,52 +13,44 @@ import config
 from ZeroTwo import app
 
 
+def btn(text, style=None, icon=None, **kw):
+    try:
+        from pyrogram.enums import ButtonStyle
+
+        extra = {}
+        if style:
+            extra["style"] = getattr(ButtonStyle, style.upper())
+        if icon:
+            extra["icon_custom_emoji_id"] = str(icon)
+        return InlineKeyboardButton(text=text, **kw, **extra)
+    except (ImportError, TypeError):
+        return InlineKeyboardButton(text=text, **kw)
+
+
 def start_panel(_):
-    buttons = [
+    return [
         [
-            InlineKeyboardButton(
-    text=_["S_B_1"],
-    url=f"https://t.me/{app.username}?startgroup=true",
-    style="success",
-    icon_custom_emoji_id=5134476056241112076,
-),
-            InlineKeyboardButton(
-    text=_["S_B_2"],
-    url=config.SUPPORT_CHAT,
-    style="success",
-    icon_custom_emoji_id=5134202243486057363,
-),
+            btn(_["S_B_1"], "success", 5134476056241112076,
+                url=f"https://t.me/{app.username}?startgroup=true"),
+            btn(_["S_B_2"], "success", 5134202243486057363,
+                url=config.SUPPORT_CHAT),
         ],
     ]
-    return buttons
 
 
 def private_panel(_):
-    buttons = [
+    return [
         [
-            InlineKeyboardButton(
-    text=_["S_B_3"],
-    url=f"https://t.me/{app.username}?startgroup=true",
-    style="success",
-    icon_custom_emoji_id=5134476056241112076,
-            )
+            btn(_["S_B_3"], "success", 5134476056241112076,
+                url=f"https://t.me/{app.username}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton(
-    text=_["S_B_2"],
-    callback_data="Alone_Music",
-    style="success",
-    icon_custom_emoji_id=5134202243486057363,
-),
+            btn(_["S_B_2"], "success", 5134202243486057363,
+                callback_data="Alone_Music"),
             InlineKeyboardButton(text="💌 ʏᴛ-ᴀᴘɪ", callback_data="bot_info_data"),
         ],
         [
-    InlineKeyboardButton(
-        text=_["S_B_4"],
-        callback_data="settings_back_helper",
-        style="success",
-        icon_custom_emoji_id=5085022089103016925,
-    )
-],
+            btn(_["S_B_4"], "success", 5085022089103016925,
+                callback_data="settings_back_helper"),
+        ],
     ]
-    return buttons
