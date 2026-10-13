@@ -24,7 +24,7 @@ def btn(text, style=None, icon=None, **kw):
 
 
 def start_panel(_):
-    """Buttons displayed on group start."""
+    """Buttons for group start: Add Me + Support in one row."""
     return [
         [
             btn(
@@ -44,7 +44,7 @@ def start_panel(_):
 
 
 def private_panel(_):
-    """Buttons displayed on private/DM start."""
+    """Buttons for private/DM start."""
     return [
         [
             btn(
