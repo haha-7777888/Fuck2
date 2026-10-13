@@ -1,4 +1,4 @@
-```python
+
 #
 # Copyright (C) 2021-2022 by TheAloneteam@Github,
 # < https://github.com/TheAloneTeam >.
@@ -140,4 +140,3 @@ async def helper_cb(client, CallbackQuery):
         reply_markup=keyboard,
         disable_web_page_preview=True,
     )
-```
