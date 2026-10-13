@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2021-2022 by TheAloneteam@Github, < https://github.com/TheAloneTeam >.
 #
@@ -14,94 +15,168 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from AloneMusic import app
 
 
+def btn(text, style=None, icon=None, **kw):
+    try:
+        from pyrogram.enums import ButtonStyle
+
+        extra = {}
+
+        if style:
+            extra["style"] = getattr(ButtonStyle, style.upper())
+
+        if icon:
+            extra["icon_custom_emoji_id"] = str(icon)
+
+        return InlineKeyboardButton(text=text, **kw, **extra)
+
+    except (ImportError, TypeError, AttributeError):
+        return InlineKeyboardButton(text=text, **kw)
+
+
 def help_pannel(_, START: Union[bool, int] = None):
-    first = [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")]
+    first = [
+        btn(
+            text=_["CLOSE_BUTTON"],
+            style="success",
+            callback_data="close",
+        )
+    ]
+
     second = [
-        InlineKeyboardButton(
+        btn(
             text=_["BACK_BUTTON"],
+<<<<<<< HEAD:AloneMusic/utils/inline/help.py
             callback_data="MeowRoBot_back",
+=======
+            style="success",
+            callback_data="settingsback_helper",
+>>>>>>> f04aaea8476dbfed1015127490c85e9024d7679a:ZeroTwo/utils/inline/help.py
         ),
     ]
+
     mark = second if START else first
+
     upl = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_1"],
+                    style="success",
                     callback_data="help_callback hb1",
                 ),
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_2"],
+                    style="success",
                     callback_data="help_callback hb2",
                 ),
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_3"],
+                    style="success",
                     callback_data="help_callback hb3",
                 ),
             ],
             [
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_4"],
+                    style="success",
                     callback_data="help_callback hb4",
                 ),
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_5"],
+                    style="success",
                     callback_data="help_callback hb5",
                 ),
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_6"],
+                    style="success",
                     callback_data="help_callback hb6",
                 ),
             ],
             [
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_7"],
+                    style="success",
                     callback_data="help_callback hb7",
                 ),
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_8"],
+                    style="success",
                     callback_data="help_callback hb8",
                 ),
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_9"],
+                    style="success",
                     callback_data="help_callback hb9",
                 ),
             ],
             [
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_10"],
+                    style="success",
                     callback_data="help_callback hb10",
                 ),
-                InlineKeyboardButton(
+                btn(
                     text=_["H_B_11"],
+                    style="success",
                     callback_data="help_callback hb11",
                 ),
+<<<<<<< HEAD:AloneMusic/utils/inline/help.py
                 InlineKeyboardButton(
+=======
+            ],
+            [
+                btn(
+>>>>>>> f04aaea8476dbfed1015127490c85e9024d7679a:ZeroTwo/utils/inline/help.py
                     text=_["H_B_12"],
+                    style="success",
                     callback_data="help_callback hb12",
                 ),
+<<<<<<< HEAD:AloneMusic/utils/inline/help.py
             ],
             [
                 InlineKeyboardButton(
+=======
+                btn(
+>>>>>>> f04aaea8476dbfed1015127490c85e9024d7679a:ZeroTwo/utils/inline/help.py
                     text=_["H_B_13"],
+                    style="success",
                     callback_data="help_callback hb13",
                 ),
             ],
             mark,
         ]
     )
+
     return upl
 
 def help_back_markup(_):
     upl = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(
+                btn(
                     text=_["BACK_BUTTON"],
+                    style="success",
                     callback_data="settings_back_helper",
                 ),
             ]
         ]
     )
+
     return upl
 
+<<<<<<< HEAD:AloneMusic/utils/inline/help.py
+=======
+
+def private_help_panel(_):
+    buttons = [
+        [
+            btn(
+                text=_["S_B_4"],
+                style="success",
+                url=f"https://t.me/{app.username}?start=help",
+            ),
+        ],
+    ]
+
+    return buttons
+>>>>>>> f04aaea8476dbfed1015127490c85e9024d7679a:ZeroTwo/utils/inline/help.py

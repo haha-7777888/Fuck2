@@ -289,13 +289,14 @@ async def autoplay_off(chat_id: int):
         return await autoplaydb.delete_one({"chat_id": chat_id})
 
 
+
 async def is_thumb_on(chat_id: int) -> bool:
     mode = thumbnail.get(chat_id)
     if mode is None:
         user = await thumbdb.find_one({"chat_id": chat_id})
         if not user:
-            thumbnail[chat_id] = True
-            return True
+            thumbnail[chat_id] = False
+            return False
         thumbnail[chat_id] = False
         return False
     return mode
@@ -313,6 +314,7 @@ async def thumb_off(chat_id: int):
     user = await thumbdb.find_one({"chat_id": chat_id})
     if not user:
         return await thumbdb.insert_one({"chat_id": chat_id})
+
 
 
 async def get_loop(chat_id: int) -> int:

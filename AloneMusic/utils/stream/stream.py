@@ -250,14 +250,32 @@ async def stream(
         title = (result["title"]).title()
         duration_min = result["duration_min"]
         thumbnail = result["thumb"]
+ 
         status = True if video else None
         try:
             file_path, direct = await YouTube.download(
                 vidid, mystic, videoid=True, video=status
             )
+
+            if not file_path:
+                print(
+                    f"YouTube download failed: vidid={vidid}, "
+                    f"video={status}"
+                )
+                raise AssistantErr(_["play_14"])
+
+        except AssistantErr:
+            raise
         except Exception as ex:
-            print(ex)
+            print(f"YouTube download error for {vidid}: {ex}")
             raise AssistantErr(_["play_14"])
+
+            
+                
+            
+        
+          
+            
         if await is_active_chat(chat_id):
             await put_queue(
                 chat_id,
