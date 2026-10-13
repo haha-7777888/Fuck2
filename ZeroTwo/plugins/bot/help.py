@@ -1,5 +1,5 @@
-
-
+```python
+#
 # Copyright (C) 2021-2022 by TheAloneteam@Github,
 # < https://github.com/TheAloneTeam >.
 #
@@ -20,17 +20,15 @@ from ZeroTwo import app
 from ZeroTwo.misc import SUDOERS
 from ZeroTwo.utils import help_pannel
 from ZeroTwo.utils.database import get_lang
-from ZeroTwo.utils.decorators.language import languageCB
+from ZeroTwo.utils.decorators.language import LanguageStart
 from ZeroTwo.utils.inline.help import help_back_markup
 
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
-from strings import get_string, helpers
+from strings import get_string
 
 
 def get_english_strings():
-    """
-    Load the English strings from strings/langs/en.yml.
-    """
+    """Load English strings from strings/langs/en.yml."""
     return get_string("en")
 
 
@@ -78,9 +76,8 @@ async def helper_private(
 
 @app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
 async def help_com_group(client, message: Message):
-    # Load help text from strings/langs/en.yml.
+    """Display the help menu in groups using English YAML strings."""
     _ = get_english_strings()
-
     keyboard = help_pannel(_)
 
     await message.reply_text(
@@ -93,8 +90,10 @@ async def help_com_group(client, message: Message):
 @app.on_callback_query(
     filters.regex("^help_callback") & ~BANNED_USERS
 )
-@languageCB
-async def helper_cb(client, CallbackQuery, _):
+async def helper_cb(client, CallbackQuery):
+    """Load individual help pages from strings/langs/en.yml."""
+    _ = get_english_strings()
+
     callback_data = CallbackQuery.data.strip()
     parts = callback_data.split(None, 1)
 
@@ -106,95 +105,39 @@ async def helper_cb(client, CallbackQuery, _):
         return
 
     cb = parts[1].strip()
-    keyboard = help_back_markup(_)
 
-    if cb == "hb1":
-        await CallbackQuery.edit_message_text(
-            helpers.help_1,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb2":
-        await CallbackQuery.edit_message_text(
-            helpers.help_2,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb3":
-        await CallbackQuery.edit_message_text(
-            helpers.help_3,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb4":
-        await CallbackQuery.edit_message_text(
-            helpers.help_4,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb5":
-        await CallbackQuery.edit_message_text(
-            helpers.help_5,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb6":
-        await CallbackQuery.edit_message_text(
-            helpers.help_6,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb7":
-        if CallbackQuery.from_user.id not in SUDOERS:
-            await CallbackQuery.answer(
-                "ᴛʜɪs ʙᴜᴛᴛᴏɴ ɪs ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs.",
-                show_alert=True,
-            )
-            return
-
-        await CallbackQuery.edit_message_text(
-            helpers.help_7,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb8":
-        await CallbackQuery.edit_message_text(
-            helpers.help_8,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb9":
-        await CallbackQuery.edit_message_text(
-            helpers.help_9,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb10":
-        await CallbackQuery.edit_message_text(
-            helpers.help_10,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb11":
-        await CallbackQuery.edit_message_text(
-            helpers.help_11,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb12":
-        await CallbackQuery.edit_message_text(
-            helpers.help_12,
-            reply_markup=keyboard,
-        )
-
-    elif cb == "hb13":
-        await CallbackQuery.edit_message_text(
-            helpers.help_13,
-            reply_markup=keyboard,
-        )
-
-    else:
+    if not cb.startswith("hb") or not cb[2:].isdigit():
         await CallbackQuery.answer(
             "Help page not found.",
             show_alert=True,
         )
+        return
+
+    page = int(cb[2:])
+    key = f"help_{page}"
+
+    # Preserve the sudo-only restriction for page 7.
+    if page == 7 and CallbackQuery.from_user.id not in SUDOERS:
+        await CallbackQuery.answer(
+            "This button is only for sudo users.",
+            show_alert=True,
+        )
+        return
+
+    # Check that the requested page exists in en.yml.
+    if key not in _:
+        await CallbackQuery.answer(
+            f"{key} is missing from strings/langs/en.yml.",
+            show_alert=True,
+        )
+        return
+
+    keyboard = help_back_markup(_)
+
+    await CallbackQuery.answer()
+    await CallbackQuery.edit_message_text(
+        _[key],
+        reply_markup=keyboard,
+        disable_web_page_preview=True,
+    )
+```
