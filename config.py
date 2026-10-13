@@ -80,7 +80,7 @@ DEBUG_IGNORE_LOG = True
 
 # Telegram user ID of the owner.
 OWNER_ID = get_int("OWNER_ID", 6018803920)
-
+CODE_CREW_CHANNEL = "https://t.me/thecodecrew"
 # --------------------------------------------------
 # HEROKU CONFIGURATION
 # --------------------------------------------------
