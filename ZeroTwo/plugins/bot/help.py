@@ -1,10 +1,13 @@
 
+
+# Copyright (C) 2021-2022 by TheAloneteam@Github,
+# < https://github.com/TheAloneTeam >.
 #
-# Copyright (C) 2021-2022 by TheAloneteam@Github, < https://github.com/TheAloneTeam >.
-#
-# This file is part of < https://github.com/TheAloneTeam/ZeroTwo > project,
+# This file is part of
+# < https://github.com/TheAloneTeam/ZeroTwo > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TheAloneTeam/ZeroTwo/blob/master/LICENSE >
+# Please see
+# < https://github.com/TheAloneTeam/ZeroTwo/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -17,10 +20,18 @@ from ZeroTwo import app
 from ZeroTwo.misc import SUDOERS
 from ZeroTwo.utils import help_pannel
 from ZeroTwo.utils.database import get_lang
-from ZeroTwo.utils.decorators.language import LanguageStart, languageCB
+from ZeroTwo.utils.decorators.language import languageCB
 from ZeroTwo.utils.inline.help import help_back_markup
+
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
 from strings import get_string, helpers
+
+
+def get_english_strings():
+    """
+    Load the English strings from strings/langs/en.yml.
+    """
+    return get_string("en")
 
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
@@ -28,8 +39,11 @@ from strings import get_string, helpers
     filters.regex("^settings_back_helper$") & ~BANNED_USERS
 )
 async def helper_private(
-    client: app, update: Union[types.Message, types.CallbackQuery]
+    client: app,
+    update: Union[types.Message, types.CallbackQuery],
 ):
+    _ = get_english_strings()
+
     if isinstance(update, types.CallbackQuery):
         try:
             await update.answer()
@@ -39,37 +53,34 @@ async def helper_private(
         if not update.message:
             return
 
-        chat_id = update.message.chat.id
-        language = await get_lang(chat_id)
-        _ = get_string(language)
         keyboard = help_pannel(_, True)
 
         await update.edit_message_text(
             _["help_1"].format(SUPPORT_CHAT),
             reply_markup=keyboard,
         )
+
     else:
         try:
             await update.delete()
         except Exception:
             pass
 
-        language = await get_lang(update.chat.id)
-        _ = get_string(language)
         keyboard = help_pannel(_)
 
         await update.reply_photo(
             photo=START_IMG_URL,
             has_spoiler=False,
             caption=_["help_1"].format(SUPPORT_CHAT),
-            reply_markup=keyboard,
+            reply_markup=InlineKeyboardMarkup(keyboard),
         )
 
 
 @app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
-@LanguageStart
-async def help_com_group(client, message: Message, _):
-    # Use the same help text as private /help.
+async def help_com_group(client, message: Message):
+    # Load help text from strings/langs/en.yml.
+    _ = get_english_strings()
+
     keyboard = help_pannel(_)
 
     await message.reply_text(
@@ -184,7 +195,6 @@ async def helper_cb(client, CallbackQuery, _):
 
     else:
         await CallbackQuery.answer(
-            "help page not found.",
+            "Help page not found.",
             show_alert=True,
         )
-
