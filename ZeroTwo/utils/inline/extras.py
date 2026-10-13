@@ -40,8 +40,10 @@ def supp_markup(_):
     upl = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(
-                    text=_["S_B_9"],
+                btn(
+                    _["S_B_9"],
+                    "success",
+                    5134202243486057363,
                     url=SUPPORT_CHAT,
                 ),
             ]
