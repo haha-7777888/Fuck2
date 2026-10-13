@@ -1,3 +1,4 @@
+```python
 #
 # Copyright (C) 2021-2022 by TheAloneteam@Github, < https://github.com/TheAloneTeam >.
 #
@@ -17,37 +18,46 @@ from ZeroTwo.misc import SUDOERS
 from ZeroTwo.utils import help_pannel
 from ZeroTwo.utils.database import get_lang
 from ZeroTwo.utils.decorators.language import LanguageStart, languageCB
-from ZeroTwo.utils.inline.help import help_back_markup, private_help_panel
+from ZeroTwo.utils.inline.help import help_back_markup
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
 from strings import get_string, helpers
 
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
-@app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
+@app.on_callback_query(
+    filters.regex("^settings_back_helper$") & ~BANNED_USERS
+)
 async def helper_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
-    is_callback = isinstance(update, types.CallbackQuery)
-    if is_callback:
+    if isinstance(update, types.CallbackQuery):
         try:
             await update.answer()
-        except:
+        except Exception:
             pass
+
+        if not update.message:
+            return
+
         chat_id = update.message.chat.id
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_, True)
+
         await update.edit_message_text(
-            _["help_1"].format(SUPPORT_CHAT), reply_markup=keyboard
+            _["help_1"].format(SUPPORT_CHAT),
+            reply_markup=keyboard,
         )
     else:
         try:
             await update.delete()
-        except:
+        except Exception:
             pass
+
         language = await get_lang(update.chat.id)
         _ = get_string(language)
         keyboard = help_pannel(_)
+
         await update.reply_photo(
             photo=START_IMG_URL,
             has_spoiler=False,
@@ -59,44 +69,122 @@ async def helper_private(
 @app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def help_com_group(client, message: Message, _):
-    keyboard = private_help_panel(_)
-    await message.reply_text(_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard))
+    # Use the same help text as private /help.
+    keyboard = help_pannel(_)
+
+    await message.reply_text(
+        _["help_1"].format(SUPPORT_CHAT),
+        reply_markup=InlineKeyboardMarkup(keyboard),
+        disable_web_page_preview=True,
+    )
 
 
-@app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
+@app.on_callback_query(
+    filters.regex("^help_callback") & ~BANNED_USERS
+)
 @languageCB
 async def helper_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
-    cb = callback_data.split(None, 1)[1]
+    parts = callback_data.split(None, 1)
+
+    if len(parts) < 2:
+        await CallbackQuery.answer(
+            "Invalid help option.",
+            show_alert=True,
+        )
+        return
+
+    cb = parts[1].strip()
     keyboard = help_back_markup(_)
+
     if cb == "hb1":
-        await CallbackQuery.edit_message_text(helpers.HELP_1, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_1,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb2":
-        await CallbackQuery.edit_message_text(helpers.HELP_2, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_2,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb3":
-        await CallbackQuery.edit_message_text(helpers.HELP_3, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_3,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb4":
-        await CallbackQuery.edit_message_text(helpers.HELP_4, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_4,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb5":
-        await CallbackQuery.edit_message_text(helpers.HELP_5, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_5,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb6":
-        await CallbackQuery.edit_message_text(helpers.HELP_6, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_6,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb7":
         if CallbackQuery.from_user.id not in SUDOERS:
             await CallbackQuery.answer(
-                "ᴛʜɪs ʙᴜᴛᴛᴏɴ ɪs ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs.", show_alert=True
+                "ᴛʜɪs ʙᴜᴛᴛᴏɴ ɪs ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs.",
+                show_alert=True,
             )
             return
-        await CallbackQuery.edit_message_text(helpers.HELP_7, reply_markup=keyboard)
+
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_7,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb8":
-        await CallbackQuery.edit_message_text(helpers.HELP_8, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_8,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb9":
-        await CallbackQuery.edit_message_text(helpers.HELP_9, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_9,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb10":
-        await CallbackQuery.edit_message_text(helpers.HELP_10, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_10,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb11":
-        await CallbackQuery.edit_message_text(helpers.HELP_11, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_11,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb12":
-        await CallbackQuery.edit_message_text(helpers.HELP_12, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_12,
+            reply_markup=keyboard,
+        )
+
     elif cb == "hb13":
-        await CallbackQuery.edit_message_text(helpers.HELP_13, reply_markup=keyboard)
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_13,
+            reply_markup=keyboard,
+        )
+
+    else:
+        await CallbackQuery.answer(
+            "Help page not found.",
+            show_alert=True,
+        )
+```
