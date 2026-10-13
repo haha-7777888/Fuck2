@@ -1,4 +1,4 @@
-```python
+
 #
 # Copyright (C) 2021-2022 by TheAloneteam@Github, < https://github.com/TheAloneTeam >.
 #
@@ -187,4 +187,4 @@ async def helper_cb(client, CallbackQuery, _):
             "Help page not found.",
             show_alert=True,
         )
-```
+
