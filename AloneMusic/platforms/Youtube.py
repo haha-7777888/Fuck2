@@ -13,7 +13,7 @@ import yt_dlp
 
 # ── Config ────────────────────────────────────────────────────
 API_URL = os.getenv("API_URL", "https://api.riteshyt.in").rstrip("/")
-API_KEY = os.getenv("API_KEY", "riteshfreea59a0b69fdef24a602fd7673")
+API_KEY = os.getenv("API_KEY", "riteshfree74ebc58d0257b6b6033c8e4f")
 
 # ── Dynamic imports with graceful fallbacks ───────────────────
 try:
