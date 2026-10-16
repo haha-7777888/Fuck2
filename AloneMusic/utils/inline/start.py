@@ -46,29 +46,14 @@ def private_panel(_):
             InlineKeyboardButton(
                 text=_["S_B_2"],
                 callback_data="Alone_Music"
-            ),
-            InlineKeyboardButton(
-                text="⌯ ꜱᴏᴜʀᴄᴇ ⌯",
-                callback_data="gib_source"
-            ),
+            )
         ],
         [
             InlineKeyboardButton(
-                text="⌯ ʙᴏᴛꜱ ꜱᴛᴀᴛꜱ ⌯",
-                url="https://t.me/Aashik_Bots"
-            ),
-            InlineKeyboardButton(
-                text="⌯ ᴘʀɪᴠᴀᴄʏ ⌯",
-                url="https://graph.org/AloneMusic-04-12-2"
-            ),
+                text="⌯ Oᴡɴᴇʀ ⌯",
+                url=config.OWNER_LINK
+            )
         ],
-        [
-            InlineKeyboardButton(
-                text="⌯ 𝖠𝗅𝗈𝗇𝖾 𝖬𝗎𝗌𝗂𝖼 ⌯",
-                web_app=WebAppInfo(
-                    url="https://alonemusic.vercel.app"
-                )
-            ),
-        ],
+            
     ]
     return buttons
