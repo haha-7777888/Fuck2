@@ -21,7 +21,7 @@ async def privacy_policy(client, message: Message, _):
         [
             InlineKeyboardButton(
                 text=_["PRIVACY_BUTTON"],
-                url="https://graph.org/AloneMusic-04-12-2",
+                url="https://t.me/myanmarbot_music",
             ),
         ],
     ]
