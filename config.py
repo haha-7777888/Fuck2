@@ -126,7 +126,7 @@ DEBUG_IGNORE_LOG = True
 
 # Telegram user ID of the owner.
 OWNER_ID = get_int("OWNER_ID", 6018803920)
-CODE_CREW_CHANNEL = "https://t.me/thecodecrew"
+CODE_CREW_CHANNEL = "https://t.me/hex_king9"
 # --------------------------------------------------
 # HEROKU CONFIGURATION
 # --------------------------------------------------
@@ -141,9 +141,9 @@ HEROKU_API_KEY = get_env("HEROKU_API_KEY")
 UPSTREAM_REPO = get_env(
     "UPSTREAM_REPO",
 <<<<<<< HEAD
-    "https://github.com/riteshxcoder/AloneMusicc",
+    "https://github.com/haha-7777888/Fuck2",
 =======
-    "https://github.com/slayer123700/AloneMusic",
+    "https://github.com/haha-7777888/Fuck2",
 >>>>>>> f04aaea8476dbfed1015127490c85e9024d7679a
 )
 
