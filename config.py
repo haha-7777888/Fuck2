@@ -155,7 +155,7 @@ OWNER_LINK = getenv("OWNER_LINK", "")
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", None))
 =======
-UPSTREAM_BRANCH = get_env("UPSTREAM_BRANCH", "master")
+UPSTREAM_BRANCH = get_env("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = get_env("GIT_TOKEN")
 
 # --------------------------------------------------
