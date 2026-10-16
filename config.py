@@ -149,8 +149,9 @@ UPSTREAM_REPO = get_env(
 
 <<<<<<< HEAD
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MeowCloner")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/MeowClone")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "")
+OWNER_LINK = getenv("OWNER_LINK", "")
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", None))
 =======
@@ -164,12 +165,12 @@ GIT_TOKEN = get_env("GIT_TOKEN")
 
 SUPPORT_CHANNEL = get_env(
     "SUPPORT_CHANNEL",
-    "https://t.me/LoyaItyLess",
+    "",
 )
 
 SUPPORT_CHAT = get_env(
     "SUPPORT_CHAT",
-    "https://t.me/LoyaItyLess",
+    "",
 )
 
 # --------------------------------------------------
